@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expense & Budget Visualizer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Expense & Budget Visualizer</h1>
+
+    <section class="card total">
+      <p>Total Pengeluaran</p>
+      <strong id="total">Rp0</strong>
+    </section>
+
+    <section class="card">
+      <h2>Tambah Transaksi</h2>
+      <div id="error" class="error" hidden></div>
+      <label for="name">Nama Item</label>
+      <input id="name" type="text" placeholder="Contoh: Nasi goreng">
+      <label for="amount">Jumlah (Rp)</label>
+      <input id="amount" type="number" min="0" placeholder="15000">
+      <label for="category">Kategori</label>
+      <select id="category">
+        <option>Food</option>
+        <option>Transport</option>
+        <option>Fun</option>
+      </select>
+      <button id="add">Tambah</button>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Transaksi</h2>
+        <ul id="list" class="list"></ul>
+      </section>
+      <section class="card">
+        <h2>Pengeluaran per Kategori</h2>
+        <canvas id="chart"></canvas>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
